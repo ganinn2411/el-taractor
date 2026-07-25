@@ -2,7 +2,7 @@
 <html lang="ar" dir="rtl">
 <head>
 <meta charset="UTF-8">
-<meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, minimum-scale=1.0, user-scalable=no">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
 <link rel="icon" type="image/png" href="https://assets.zyrosite.com/cdn-cgi/image/format=auto,w=375,fit=crop/XZvmNNRaLDrvgmBZ/chatgpt-image-2.-feb.-2026-10_14_48-8Vpe6F57loo0sazw.png?v=2">
 <title>التركتور | تدريب أونلاين لكمال الأجسام</title>
 <link rel="preconnect" href="https://fonts.googleapis.com">
@@ -23,15 +23,21 @@
     --line:rgba(243,238,230,0.12);
     --line-strong:rgba(243,238,230,0.22);
     --ok:#5fbf7a;
+    --line:#ffffff15;
   }
   *{box-sizing:border-box;margin:0;padding:0;}
-  html{scroll-behavior:smooth;}
+  html{scroll-behavior:smooth;overflow-x:hidden;overscroll-behavior-x:none;width:100%;}
   body{
     background:var(--bg);
     color:var(--text);
     font-family:'Tajawal','Cairo',sans-serif;
     line-height:1.7;
     overflow-x:hidden;
+    overscroll-behavior-x:none;
+    touch-action:pan-y;
+    position:relative;
+    width:100%;
+    max-width:100vw;
     background-image:
       linear-gradient(var(--line) 1px, transparent 1px),
       linear-gradient(90deg, var(--line) 1px, transparent 1px);
@@ -407,24 +413,26 @@
 
   /* ticker strip - energetic marquee between hero and about */
   .ticker{
-    border-top:1px solid var(--line);border-bottom:1px solid var(--line);
-    background:var(--bg-panel);overflow:hidden;position:relative;z-index:1;
+    border-top:1px solid var(--text);border-bottom:1px solid var(--text);
+    background:var(--line);overflow:hidden;position:relative;z-index:1;
     padding:14px 0;
+    width:100%;max-width:100vw;
   }
   .ticker-track{
-    display:flex;width:max-content;gap:0;will-change:transform;
+    display:flex;width:max-content;gap:0;
+    animation:ticker-scroll 20s linear infinite;
   }
   html[dir="rtl"] .ticker-track{animation-direction:reverse;}
   .ticker-item{
-    display:flex;align-items:center;gap:14px;
-    font-family:'JetBrains Mono',monospace;font-weight:600;font-size:0.82rem;
-    letter-spacing:0.12em;color:var(--text-dim);white-space:nowrap;padding:0 26px;
+    display:flex;align-items:center;gap:0px;
+    font-family:'JetBrains Mono',monospace;font-weight:600;font-size:large;
+    letter-spacing:0.12em;color:var(--ember-bright);white-space:nowrap;padding:0 50px;
     text-transform:uppercase;
   }
   .ticker-item .sep{color:var(--ember);}
   @keyframes ticker-scroll{
-    from{transform:translateX(0);}
-    to{transform:translateX(-50%);}
+    from{transform:translateX(100%);}
+    to{transform:translateX(-25%);}
   }
 
   /* pkg card selection pulse */
@@ -582,11 +590,47 @@
 <!-- ============ TICKER ============ -->
 <div class="ticker">
   <div class="ticker-track" id="tickerTrack">
-    <span class="ticker-item mono" data-ar="انضباط" data-en="DISCIPLINE">انضباط<span class="sep">//</span></span>
-    <span class="ticker-item mono" data-ar="قاتل" data-en="KILLER">قاتل<span class="sep">//</span></span>
-    <span class="ticker-item mono" data-ar="التزام" data-en="COMMITMENT">التزام<span class="sep">//</span></span>
-    <span class="ticker-item mono" data-ar="شغف" data-en="PASSION">شغف<span class="sep">//</span></span>
-    <span class="ticker-item mono" data-ar="مثالي" data-en="IDEAL">مثالي<span class="sep">//</span></span>
+    <span class="ticker-item mono" data-ar="انضباط" data-en="DISCIPLINE">انضباط<span class="sep"></span></span>
+    <span class="ticker-item mono" data-ar="قاتل" data-en="KILLER">قاتل<span class="sep"></span></span>
+    <span class="ticker-item mono" data-ar="التزام" data-en="COMMITMENT">التزام<span class="sep"></span></span>
+    <span class="ticker-item mono" data-ar="شغف" data-en="PASSION">شغف<span class="sep"></span></span>
+    <span class="ticker-item mono" data-ar="مثالي" data-en="IDEAL">مثالي<span class="sep"></span></span>
+    <span class="ticker-item mono" data-ar="انضباط" data-en="DISCIPLINE">انضباط<span class="sep"></span></span>
+    <span class="ticker-item mono" data-ar="قاتل" data-en="KILLER">قاتل<span class="sep"></span></span>
+    <span class="ticker-item mono" data-ar="التزام" data-en="COMMITMENT">التزام<span class="sep"></span></span>
+    <span class="ticker-item mono" data-ar="شغف" data-en="PASSION">شغف<span class="sep"></span></span>
+    <span class="ticker-item mono" data-ar="مثالي" data-en="IDEAL">مثالي<span class="sep"></span></span>
+    <span class="ticker-item mono" data-ar="انضباط" data-en="DISCIPLINE">انضباط<span class="sep"></span></span>
+    <span class="ticker-item mono" data-ar="قاتل" data-en="KILLER">قاتل<span class="sep"></span></span>
+    <span class="ticker-item mono" data-ar="التزام" data-en="COMMITMENT">التزام<span class="sep"></span></span>
+    <span class="ticker-item mono" data-ar="شغف" data-en="PASSION">شغف<span class="sep"></span></span>
+    <span class="ticker-item mono" data-ar="مثالي" data-en="IDEAL">مثالي<span class="sep"></span></span>
+    <span class="ticker-item mono" data-ar="انضباط" data-en="DISCIPLINE">انضباط<span class="sep"></span></span>
+    <span class="ticker-item mono" data-ar="قاتل" data-en="KILLER">قاتل<span class="sep"></span></span>
+    <span class="ticker-item mono" data-ar="التزام" data-en="COMMITMENT">التزام<span class="sep"></span></span>
+    <span class="ticker-item mono" data-ar="شغف" data-en="PASSION">شغف<span class="sep"></span></span>
+    <span class="ticker-item mono" data-ar="مثالي" data-en="IDEAL">مثالي<span class="sep"></span></span>
+    <span class="ticker-item mono" data-ar="انضباط" data-en="DISCIPLINE">انضباط<span class="sep"></span></span>
+    <span class="ticker-item mono" data-ar="قاتل" data-en="KILLER">قاتل<span class="sep"></span></span>
+    <span class="ticker-item mono" data-ar="التزام" data-en="COMMITMENT">التزام<span class="sep"></span></span>
+    <span class="ticker-item mono" data-ar="شغف" data-en="PASSION">شغف<span class="sep"></span></span>
+    <span class="ticker-item mono" data-ar="مثالي" data-en="IDEAL">مثالي<span class="sep"></span></span>
+    <span class="ticker-item mono" data-ar="انضباط" data-en="DISCIPLINE">انضباط<span class="sep"></span></span>
+    <span class="ticker-item mono" data-ar="قاتل" data-en="KILLER">قاتل<span class="sep"></span></span>
+    <span class="ticker-item mono" data-ar="التزام" data-en="COMMITMENT">التزام<span class="sep"></span></span>
+    <span class="ticker-item mono" data-ar="شغف" data-en="PASSION">شغف<span class="sep"></span></span>
+    <span class="ticker-item mono" data-ar="مثالي" data-en="IDEAL">مثالي<span class="sep"></span></span>
+    <span class="ticker-item mono" data-ar="انضباط" data-en="DISCIPLINE">انضباط<span class="sep"></span></span>
+    <span class="ticker-item mono" data-ar="قاتل" data-en="KILLER">قاتل<span class="sep"></span></span>
+    <span class="ticker-item mono" data-ar="التزام" data-en="COMMITMENT">التزام<span class="sep"></span></span>
+    <span class="ticker-item mono" data-ar="شغف" data-en="PASSION">شغف<span class="sep"></span></span>
+    <span class="ticker-item mono" data-ar="مثالي" data-en="IDEAL">مثالي<span class="sep"></span></span>
+    <span class="ticker-item mono" data-ar="انضباط" data-en="DISCIPLINE">انضباط<span class="sep"></span></span>
+    <span class="ticker-item mono" data-ar="قاتل" data-en="KILLER">قاتل<span class="sep"></span></span>
+    <span class="ticker-item mono" data-ar="التزام" data-en="COMMITMENT">التزام<span class="sep"></span></span>
+    <span class="ticker-item mono" data-ar="شغف" data-en="PASSION">شغف<span class="sep"></span></span>
+    <span class="ticker-item mono" data-ar="مثالي" data-en="IDEAL">مثالي<span class="sep"></span></span>
+    
   </div>
 </div>
 
@@ -915,55 +959,6 @@
     onScroll();
   })();
 
-  /* ---------- ticker: seamless infinite scroll (JS-driven, no CSS jump) ---------- */
-  var tickerRefresh = (function(){
-    const track = document.getElementById('tickerTrack');
-    if(!track) return function(){};
-    let isRtl = document.documentElement.getAttribute('dir') === 'rtl';
-    const reduceMotion = window.matchMedia && window.matchMedia('(prefers-reduced-motion: reduce)').matches;
-    const speed = 40; /* pixels per second */
-    let setWidth = 0;
-    let pos = 0;
-    let lastTime = null;
-    const baseCount = track.children.length;
-
-    function measureAndFill(){
-      isRtl = document.documentElement.getAttribute('dir') === 'rtl';
-      /* drop clones back down to the original set before re-measuring */
-      while(track.children.length > baseCount){
-        track.removeChild(track.lastElementChild);
-      }
-      const originalItems = Array.from(track.children);
-      setWidth = track.scrollWidth;
-      pos = 0;
-      const wrapWidth = track.parentElement.clientWidth;
-      /* clone the set repeatedly until track covers at least 2x the visible width,
-         guaranteeing there's always content ready to slide in with no gap */
-      while(track.scrollWidth < wrapWidth * 2 + setWidth){
-        originalItems.forEach(function(item){
-          track.appendChild(item.cloneNode(true));
-        });
-      }
-    }
-
-    function step(ts){
-      if(reduceMotion){ return; }
-      if(lastTime === null) lastTime = ts;
-      const dt = (ts - lastTime) / 1000;
-      lastTime = ts;
-      pos -= speed * dt;
-      if(-pos >= setWidth) pos += setWidth;
-      const dir = isRtl ? -1 : 1;
-      track.style.transform = 'translateX(' + (dir * pos) + 'px)';
-      requestAnimationFrame(step);
-    }
-
-    measureAndFill();
-    window.addEventListener('resize', measureAndFill);
-    if(!reduceMotion) requestAnimationFrame(step);
-    return measureAndFill;
-  })();
-
   /* ---------- scroll reveal ---------- */
   (function(){
     const targets = document.querySelectorAll('.reveal, .reveal-zoom, .reveal-line');
@@ -1075,7 +1070,6 @@
       el.setAttribute('placeholder', isAr ? el.getAttribute('data-ph-ar') : el.getAttribute('data-ph-en'));
     });
     document.getElementById('formError').classList.remove('show');
-    if(typeof tickerRefresh === 'function') tickerRefresh();
   }
 
   /* ---------- mobile nav ---------- */
